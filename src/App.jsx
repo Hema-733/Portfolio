@@ -79,6 +79,7 @@ export default function App() {
 
         <Hackathons
           hackathonsData={data.hackathons}
+          eventsData={data.events}
         />
 
         <Certifications

@@ -132,17 +132,18 @@ export default function Hero({ personalData, socials, onOpenResumeModal }) {
                   </p>
                   <p className="pl-4">
                     coreTech: [<span className="text-amber-600 dark:text-amber-300">"React"</span>,{' '}
-                    <span className="text-amber-600 dark:text-amber-300">"TypeScript"</span>,{' '}
-                    <span className="text-amber-600 dark:text-amber-300">"Tailwind"</span>],
+                    <span className="text-amber-600 dark:text-amber-300">"Tailwind"</span>,{' '}
+                    <span className="text-amber-600 dark:text-amber-300">"Python"</span>,{' '}
+                    <span className="text-amber-600 dark:text-amber-300">"Node.js"</span>],
+                  </p>
+                  <p className="pl-4">
+                    college: <span className="text-amber-600 dark:text-amber-300">"Bannari Amman Inst. of Tech"</span>,
                   </p>
                   <p className="pl-4">
                     openToRoles: <span className="text-indigo-600 dark:text-indigo-400">true</span>,
                   </p>
                   <p className="pl-4">
-                    hardWorker: <span className="text-indigo-600 dark:text-indigo-400">true</span>,
-                  </p>
-                  <p className="pl-4">
-                    motto: <span className="text-amber-600 dark:text-amber-300">"Build with passion & precision."</span>
+                    motto: <span className="text-amber-600 dark:text-amber-300">"Build user-centered & AI-powered solutions."</span>
                   </p>
                   <p>&#125;;</p>
                 </div>

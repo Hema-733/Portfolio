@@ -15,7 +15,7 @@ export default function Projects({ projectsData }) {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeModalProject, setActiveModalProject] = useState(null);
 
-  const categories = ['All', 'Full Stack', 'Frontend'];
+  const categories = ['All', 'Full Stack', 'AI / ML', 'Frontend'];
 
   const filteredProjects = useMemo(() => {
     if (selectedCategory === 'All') return projectsData;

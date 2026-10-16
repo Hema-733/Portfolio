@@ -1,7 +1,7 @@
 import React from 'react';
-import { Trophy, Calendar, Award, ExternalLink, Users, Code } from 'lucide-react';
+import { Trophy, Calendar, Award, ExternalLink, Users, Sparkles, Building2 } from 'lucide-react';
 
-export default function Hackathons({ hackathonsData }) {
+export default function Hackathons({ hackathonsData, eventsData }) {
   const getBadgeStyles = (color) => {
     switch (color) {
       case 'emerald':
@@ -29,12 +29,12 @@ export default function Hackathons({ hackathonsData }) {
             Hackathons & Competitions
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg">
-            Rapid prototyping, high-pressure teamwork, and winning innovative software solutions.
+            Rapid prototyping, machine learning sprints, and competitive problem-solving.
           </p>
         </div>
 
         {/* Hackathon Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {hackathonsData.map((item, idx) => (
             <div
               key={item.id || idx}
@@ -67,7 +67,7 @@ export default function Hackathons({ hackathonsData }) {
                     {item.title}
                   </h3>
                   <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5">
-                    Organized by {item.organizer}
+                    {item.organizer}
                   </p>
                 </div>
 
@@ -109,7 +109,7 @@ export default function Hackathons({ hackathonsData }) {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-cyan-400 hover:underline pt-1"
                   >
-                    <span>View Submission Repository</span>
+                    <span>View Project Link</span>
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 )}
@@ -117,6 +117,44 @@ export default function Hackathons({ hackathonsData }) {
             </div>
           ))}
         </div>
+
+        {/* Events & Activities Subsection */}
+        {eventsData && eventsData.length > 0 && (
+          <div className="pt-8 border-t border-slate-200/80 dark:border-slate-800/80">
+            <div className="flex items-center gap-2 mb-6">
+              <Sparkles className="w-4 h-4 text-brand-500" />
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                Events & Leadership Activities
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {eventsData.map((ev) => (
+                <div
+                  key={ev.id}
+                  className="glass-card p-5 rounded-xl border border-slate-200/80 dark:border-slate-800 hover:border-brand-300 dark:hover:border-brand-800/60 transition-colors"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h4 className="font-bold text-slate-900 dark:text-white text-sm">
+                        {ev.title}
+                      </h4>
+                      <p className="text-xs font-semibold text-brand-600 dark:text-cyan-400 mt-0.5">
+                        {ev.role}
+                      </p>
+                    </div>
+                    <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+                      {ev.year}
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                    {ev.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
       </div>
     </section>

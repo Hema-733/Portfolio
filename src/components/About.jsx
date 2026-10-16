@@ -120,6 +120,11 @@ export default function About({ aboutData, personalData }) {
                   <dd className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                     {quickFacts.institution} • CGPA: {quickFacts.cgpa}
                   </dd>
+                  {quickFacts.schooling && (
+                    <dd className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 border-t border-slate-200/50 dark:border-slate-800/50 pt-1">
+                      {quickFacts.schooling}
+                    </dd>
+                  )}
                 </div>
 
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60">
